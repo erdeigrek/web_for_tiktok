@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TikTok OAuth Callback</title>
+</head>
+<body>
+  <h1>TikTok OAuth Callback</h1>
+  <p>You can close this page after authorization.</p>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.body.insertAdjacentHTML(
+      "beforeend",
+      "<p><strong>Code:</strong> " + (params.get("code") || "No code found") + "</p>"
+    );
+  </script>
+</body>
+</html>
